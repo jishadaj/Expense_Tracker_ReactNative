@@ -26,6 +26,8 @@ import Add from './screens/Add';
 import Reports from './screens/Reports';
 import Settings from './screens/Settings';
 import { theme } from './Theme';
+import Home from './screens/Home';
+import { TabBarIcons } from './Components/TabBarIcons';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +39,10 @@ const App: () => ReactNode = () => {
       <Tab.Navigator  screenOptions={{
         tabBarStyle: { backgroundColor: theme.colors.card}, 
       }}>
+         <Tab.Screen name="Home" component={Home} options={{
+          headerTitleAlign: 'center',
+          
+        }} />
         <Tab.Screen name="Expenses" component={Expenses} options={{
           headerTitleAlign: 'center',
         }} />
